@@ -53,7 +53,3 @@ This is a theoretical work in progress. Contributions and critiques are welcome,
 
 - Grok 3 (xAI)
 - Brian
-
-## License
-
-[License information to be added]
