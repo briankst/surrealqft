@@ -35,6 +35,9 @@ Surreal numbers \(\mathbb{S}\), the maximal ordered field, embed into hyperreals
 \end{equation}
 enabling non-standard analysis tools like Loeb measures. This balances surreal richness with physical utility, distinct from smooth infinitesimal or constructive approaches.
 
+\subsection{Explicit Embedding Construction}
+For a subset \(\mathbb{S}_0 \subset \mathbb{S}\), we define the embedding \(\phi: \mathbb{S}_0 \to {}^*\mathbb{R}\) by mapping each surreal number to its corresponding hyperreal via the ultrapower construction. This ensures that the algebraic and order properties are preserved, allowing us to rigorously define probabilities and measures in the context of quantum mechanics.
+
 \section{Surreal Quantum Mechanics}
 \subsection{Hilbert Space}
 The Hilbert space is \(\mathcal{H} = \mathbb{C} \otimes {}^*\mathbb{R}\), merging complex amplitudes with hyperreal tags.
@@ -87,96 +90,4 @@ The field operator is:
 \end{equation}
 with commutator:
 \begin{equation}
-[\phi(x), \pi(y)] = i \delta(x-y) + \epsilon \delta_\epsilon(x-y),
-\end{equation}
-\(\delta_\epsilon \sim l_P / L\).
-
-\subsection{Time Evolution}
-Hamiltonian:
-\begin{align}
-H_0 &= \int d^3x \, \frac{1}{2} [\pi^2 + (\nabla \phi_0)^2 + m^2 \phi_0^2], \\
-\epsilon H_1 &= l_P \int d^3x \, \phi_1 R_{\mu\nu} \partial^\mu \phi \partial^\nu \phi / L.
-\end{align}
-
-\subsection{Integration into Standard QFT}
-The \(\epsilon_i\)-tags are perturbative corrections, ensuring standard QFT behavior at leading order. Renormalization remains intact, as surreal terms are higher-order effects, not affecting divergent structures.
-
-\section{Bell Inequality Resolution}
-For \(\ket{\psi} = \frac{\ket{00} + \ket{11}}{\sqrt{2}}\), local tags \(\epsilon_A(a)\), \(\epsilon_B(b)\) yield:
-\begin{equation}
-E(a,b) = -\cos(\theta_a - \theta_b), \quad S = 2\sqrt{2}.
-\end{equation}
-
-\subsection{Superdeterminism and Measurement Independence}
-Surreal QFT’s deterministic nature aligns with superdeterminism: outcomes are fixed by \(\epsilon_i\) tags at entanglement, resolving Bell violations locally. Unlike extreme superdeterminism, we assume measurement choices are statistically independent of \(\epsilon_i\), preserving the freedom of choice assumption and avoiding conspiratorial correlations.
-
-\subsection{Multi-Particle Locality}
-For a GHZ state \(\ket{\psi} = \frac{\ket{000} + \ket{111}}{\sqrt{2}}\), local tags \(\epsilon_A(a)\), \(\epsilon_B(b)\), \(\epsilon_C(c)\) ensure pre-set correlations, with \(\frac{\partial S}{\partial x} = 0\) for spacelike separations.
-
-\section{Gravity Integration}
-\subsection{Surreal-Extended Field Equations}
-Action:
-\begin{equation}
-S = \int d^4x \sqrt{-g} \left( \frac{R}{16\pi G} + \epsilon R^q + \mathcal{L}_m \right),
-\end{equation}
-\(R^q = R_{\mu\nu} \phi \partial^\mu \phi \partial^\nu \phi\), yields:
-\begin{equation}
-G_{\mu\nu} = 8\pi G \left( T_{\mu\nu}^{(0)} + \epsilon T_{\mu\nu}^{(1)} \right).
-\end{equation}
-
-\subsection{Consistency Under Symmetries}
-The surreal term \(R^q\) is a scalar, preserving diffeomorphism invariance. For gauge theories, corrections like \(\epsilon F_{\mu\nu} F^{\mu\nu}\) maintain gauge symmetry.
-
-\section{Comparison with Other Theories}
-\begin{center}
-\begin{tabular}{lcccc}
-\hline
-\textbf{Approach} & \textbf{Deterministic} & \textbf{Local} & \textbf{Matches QM} & \textbf{Unifies GR} \\
-\hline
-Copenhagen & $\times$ & $\times$ & $\checkmark$ & $\times$ \\
-Bohmian & $\checkmark$ & $\times$ & $\checkmark$ & $\times$ \\
-GRW & $\times$ & $\checkmark$ & Approx. & $\times$ \\
-Surreal QFT & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
-\hline
-\end{tabular}
-\end{center}
-
-\section{Toy Models}
-\subsection{Hydrogen Atom}
-Perturbation \(\epsilon V(r) = \epsilon \frac{\alpha}{r^2}\):
-\begin{equation}
-\delta E_n = \epsilon \alpha \left\langle \frac{1}{r^2} \right\rangle_n, \quad \delta E_1 / E_1 \sim 10^{-17}.
-\end{equation}
-
-\subsection{Quantum Optics}
-A Mach-Zehnder interferometer gains \(\delta \phi \sim 10^{-10}\), measurable with meter-scale setups.
-
-\section{Detailed CMB Predictions}
-Correction:
-\begin{equation}
-\Delta \mathcal{P}(k) = \epsilon^2 \left( \frac{k}{k_*} \right)^{n_s-1} \ln \left( \frac{k}{k_*} \right),
-\end{equation}
-yields:
-\begin{equation}
-\frac{\Delta C_l}{C_l} \approx 10^{-10} \ln \left( \frac{k}{k_*} \right),
-\end{equation}
-testable by CMB-S4.
-
-\section{Expanded Experimental Predictions}
-Beyond CMB shifts, Surreal QFT predicts:
-\begin{itemize}
-    \item \textbf{High-Precision Spectroscopy}: \(\delta E / E \sim 10^{-17}\), detectable with future atomic clocks.
-    \item \textbf{Quantum Optics}: Phase shifts \(\delta \phi \sim 10^{-10}\) in interferometers.
-    \item \textbf{Gravitational Waves}: Mode shifts \(\delta \omega / \omega \sim 10^{-10}\), observable with LISA.
-\end{itemize}
-
-\section{Conclusion}
-Surreal QFT unifies QM and GR deterministically, with surreal tags preserving quantum statistics and symmetries while offering testable predictions.
-
-\begin{thebibliography}{9}
-\bibitem{Conway} J. H. Conway, \emph{On Numbers and Games}, Academic Press, 1976.
-\bibitem{Goldblatt} R. Goldblatt, \emph{Lectures on the Hyperreals}, Springer, 1998.
-\bibitem{Albeverio} S. Albeverio et al., \emph{Nonstandard Methods in Stochastic Analysis and Mathematical Physics}, Academic Press, 1986.
-\end{thebibliography}
-
-\end{document}
+[\phi(x), \pi(y)] = i \delta(x-y) + \epsilon \delta
