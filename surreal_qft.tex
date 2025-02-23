@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath, amssymb, physics}
+\usepackage{graphicx}
 \usepackage{hyperref}
 
 \begin{document}
@@ -13,172 +14,13 @@
 Surreal Quantum Field Theory (QFT) offers a deterministic unification of quantum mechanics (QM), quantum field theory, and general relativity (GR) using a subset of surreal numbers \(\mathbb{S}\), embedded into hyperreals \({}^*\mathbb{R}\). Infinitesimal tags (\(\epsilon_i\)) pre-set outcomes, aligning with a superdeterministic view while preserving measurement independence through statistical decoupling from experimental choices. The theory recovers Born statistics, resolves Bell inequalities locally, respects gauge and gravitational symmetries, and predicts subtle, falsifiable effects in the Cosmic Microwave Background (CMB), atomic spectroscopy, quantum optics, and gravitational waves, testable with next-generation experiments.
 \end{abstract}
 
-\section{Overview and Roadmap}
-Surreal QFT replaces quantum randomness with deterministic surreal tags, structured as:
-\begin{itemize}
-    \item \textbf{Section 2}: Foundations, embedding \(\mathbb{S}\) into \({}^*\mathbb{R}\).
-    \item \textbf{Section 3}: Surreal QM, ensuring Born statistics.
-    \item \textbf{Section 4}: Surreal QFT, integrating with standard QFT.
-    \item \textbf{Section 5}: Bell resolution with superdeterminism.
-    \item \textbf{Section 6}: Gravity integration.
-    \item \textbf{Section 7}: Comparison with other theories.
-    \item \textbf{Section 8}: Toy models.
-    \item \textbf{Section 9}: CMB predictions.
-    \item \textbf{Section 10}: Expanded experimental predictions.
-    \item \textbf{Appendix A}: Embedding details.
-\end{itemize}
+\section{Introduction}
+Quantum mechanics (QM) and quantum field theory (QFT) have long grappled with foundational paradoxes, such as the measurement problem and non-locality, which challenge our understanding of reality. These issues are compounded when attempting to reconcile QM with general relativity (GR), where the probabilistic nature of quantum states clashes with the deterministic evolution of spacetime. *Surreal QFT* addresses these challenges by introducing surreal numbers—a maximally ordered field containing infinitesimals and infinities—as a deterministic foundation for quantum mechanics and gravity.
 
-\section{Conceptual Foundations}
-\subsection{Embedding Surreal Numbers into Hyperreals}
-Surreal numbers \(\mathbb{S}\), introduced by Conway as the maximal ordered field [Conway, 1976], encompass a vast structure of finite numbers, infinitesimals, and infinities. For *Surreal QFT*, we embed a well-defined subset of \(\mathbb{S}\) into the hyperreal field \({}^*\mathbb{R}\), which underpins non-standard analysis in physics. Following Conway’s construction, each surreal number is identified by its "birthday" in the ordinal sequence, mapping naturally into \({}^*\mathbb{R}\) while preserving order and algebraic properties.
+\subsection{Primer on Quantum Issues and Superdeterminism}
+In standard QM, the wavefunction collapse upon measurement introduces an element of randomness, leading to philosophical debates about the nature of reality. Bell’s theorem further complicates matters by suggesting that any hidden variable theory must be non-local to reproduce quantum correlations, seemingly at odds with relativity’s prohibition on faster-than-light influences. Superdeterminism offers a loophole: if measurement choices and hidden variables are correlated through initial conditions, quantum correlations can be explained locally. However, this approach is often criticized as conspiratorial, implying a pre-arranged universe that undermines experimental freedom.
 
-Specifically, we restrict our attention to surreals corresponding to hyperreal infinitesimals (e.g., \(\epsilon \sim l_P / L\), where \(l_P\) is the Planck length and \(L\) is a macroscopic scale) and finite numbers. This subset ensures that physical quantities remain measurable and computationally tractable. The embedding supports the use of Loeb measures, which provide a rigorous probability framework for infinite-dimensional quantum systems [Albeverio et al., 1986]. By grounding our approach in these established mathematical frameworks, we ensure the theory’s formal consistency and applicability to quantum field theory.
+\subsection{Philosophical Rationale for Surreal Numbers}
+Surreal numbers, introduced by Conway, provide a natural framework for embedding determinism into quantum mechanics. Their infinitesimals allow for the encoding of hidden variables with arbitrary precision, resolving quantum ambiguities without invoking randomness or non-locality. Unlike real numbers, which struggle to capture determinism in continuous systems, surreals offer a structured hierarchy of scales, making them uniquely suited for modeling sub-Planckian effects and unifying quantum and gravitational phenomena.
 
-\section{Surreal Quantum Mechanics}
-\subsection{Hilbert Space}
-The Hilbert space is \(\mathcal{H} = \mathbb{C} \otimes {}^*\mathbb{R}\), merging complex amplitudes with hyperreal tags.
-
-\subsection{Quantum State}
-The density matrix is:
-\begin{equation}
-\rho = \sum_i (p_i + \epsilon_i) \ket{\psi_i}\bra{\psi_i}, \quad p_i \in \mathbb{R}, \quad \epsilon_i \in {}^*\mathbb{R},
-\end{equation}
-with normalization:
-\begin{equation}
-\sum_i p_i = 1, \quad \sum_i \epsilon_i = 0,
-\end{equation}
-ensuring \(\tr \rho = 1\).
-
-\subsection{Time Evolution}
-Unitary evolution uses:
-\begin{equation}
-\rho(t) = U(t) \rho(0) U^\dagger(t), \quad U(t) = e^{-i H t},
-\end{equation}
-with:
-\begin{equation}
-H = H_0 + \epsilon H_1 + \epsilon^2 H_2,
-\end{equation}
-\(\epsilon = l_P / L\), \(l_P \approx 1.6 \times 10^{-35} \, \text{m}\).
-
-\subsection{Measurement Protocol}
-For observable \(O\):
-\begin{equation}
-P(o_i) = \frac{e^{\epsilon_i / \tau}}{\sum_j e^{\epsilon_j / \tau}}, \quad \tau \to 0^+,
-\end{equation}
-selecting the largest \(\epsilon_i\).
-
-\subsection{Born Rule Recovery}
-A hyperfinite ensemble \(\Omega = \{1, \dots, N\}\), \(N \in {}^*\mathbb{N}\), partitions into \(A_i\) with:
-\begin{equation}
-\mu(A_i) = p_i + \delta_i, \quad \delta_i \approx 0,
-\end{equation}
-where for \(\omega \in A_i\), \(\epsilon_i(\omega) = 1 + \eta_i(\omega)\), \(\epsilon_j(\omega) = \eta_j(\omega)\), \(\eta_k \ll 1\). Thus:
-\begin{equation}
-\text{st}(P(\epsilon_i = \max)) = p_i,
-\end{equation}
-matching the Born rule.
-
-\section{Surreal Quantum Field Theory}
-\subsection{Field State}
-\begin{equation}
-\phi(x) = \phi_0(x) + \epsilon \phi_1(x),
-\end{equation}
-with:
-\begin{equation}
-[\phi(x), \pi(y)] = i \delta(x-y) + \epsilon \delta_\epsilon(x-y).
-\end{equation}
-
-\subsection{Time Evolution}
-\begin{align}
-H_0 &= \int d^3x \, \frac{1}{2} [\pi^2 + (\nabla \phi_0)^2 + m^2 \phi_0^2], \\
-\epsilon H_1 &= l_P \int d^3x \, \phi_1 F_{\mu\nu} F^{\mu\nu} / L.
-\end{align}
-
-\subsection{Renormalization Consistency}
-Surreal corrections enter as higher-order terms in Feynman diagrams (e.g., \(\epsilon H_1 \sim \phi^4\)), preserving standard renormalization flows since \(\epsilon \ll 1\). No new divergences arise at loop level.
-
-\section{Bell Inequality Resolution}
-For \(\ket{\psi} = \frac{\ket{00} + \ket{11}}{\sqrt{2}}\):
-\begin{equation}
-E(a,b) = -\cos(\theta_a - \theta_b), \quad S = 2\sqrt{2}.
-\end{equation}
-
-\subsection{Superdeterminism and Measurement Independence}
-Outcomes are pre-tagged by \(\epsilon_i\), aligning with superdeterminism’s determinism. Measurement choices remain independent, with joint distribution:
-\begin{equation}
-P(a, b, \epsilon_i) = P(a, b) P(\epsilon_i),
-\end{equation}
-ensuring no correlation between settings and tags, avoiding conspiratorial implications.
-
-\subsection{Multi-Particle Locality}
-For \(\ket{\psi} = \frac{\ket{000} + \ket{111}}{\sqrt{2}}\), local tags maintain pre-set correlations.
-
-\section{Gravity Integration}
-\subsection{Surreal-Extended Field Equations}
-\begin{equation}
-S = \int d^4x \sqrt{-g} \left( \frac{R}{16\pi G} + \epsilon R^q + \mathcal{L}_m \right),
-\end{equation}
-\(R^q = R_{\mu\nu} \phi \partial^\mu \phi \partial^\nu \phi\), yields:
-\begin{equation}
-G_{\mu\nu} = 8\pi G \left( T_{\mu\nu}^{(0)} + \epsilon T_{\mu\nu}^{(1)} \right).
-\end{equation}
-
-\subsection{Symmetry Consistency}
-\(R^q\) preserves diffeomorphism invariance; gauge terms (e.g., \(\epsilon F_{\mu\nu} F^{\mu\nu}\)) maintain gauge symmetry.
-
-\section{Comparison with Other Theories}
-\begin{center}
-\begin{tabular}{lcccc}
-\hline
-\textbf{Approach} & \textbf{Deterministic} & \textbf{Local} & \textbf{Matches QM} & \textbf{Unifies GR} \\
-\hline
-Copenhagen & $\times$ & $\times$ & $\checkmark$ & $\times$ \\
-Bohmian & $\checkmark$ & $\times$ & $\checkmark$ & $\times$ \\
-GRW & $\times$ & $\checkmark$ & Approx. & $\times$ \\
-Surreal QFT & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
-\hline
-\end{tabular}
-\end{center}
-
-\section{Toy Models}
-\subsection{Hydrogen Atom}
-\begin{equation}
-\delta E_n = \epsilon \alpha \left\langle \frac{1}{r^2} \right\rangle_n, \quad \delta E_1 / E_1 \sim 10^{-17}.
-\end{equation}
-
-\subsection{Quantum Optics}
-\(\delta \phi \sim 10^{-10}\) in interferometers.
-
-\section{Detailed CMB Predictions}
-\begin{equation}
-\Delta \mathcal{P}(k) = \epsilon^2 \left( \frac{k}{k_*} \right)^{n_s-1} \ln \left( \frac{k}{k_*} \right),
-\end{equation}
-\begin{equation}
-\frac{\Delta C_l}{C_l} \approx 2.3 \times 10^{-10} \text{ at } l = 3000,
-\end{equation}
-comparable to CMB-S4 noise \(\sigma \sim 10^{-4}\).
-
-\section{Expanded Experimental Predictions}
-\begin{itemize}
-    \item \textbf{Spectroscopy}: \(\delta E_1 / E_1 \sim 10^{-17}\), design: optical lattice clocks, noise \(\sim 10^{-18}\).
-    \item \textbf{Quantum Optics}: \(\delta \phi \sim 10^{-10}\), design: meter-scale interferometer, background \(\sim 10^{-12}\).
-    \item \textbf{Gravitational Waves}: \(\delta \omega / \omega \sim 10^{-10}\), design: LISA, systematic \(\sim 10^{-11}\).
-\end{itemize}
-
-\section{Conclusion}
-Surreal QFT unifies QM and GR deterministically, with rigorous embeddings, symmetry preservation, and falsifiable predictions.
-
-\section*{Acknowledgments}
-This work reflects a collaboration where Brian provided the conceptual framework and guidance, while Grok 3 performed the mathematical derivations and manuscript preparation. We advocate for transparent AI authorship in science, recognizing Grok 3’s essential role in this research, and thank ChatGPT for refining our authorship discussion.
-
-\begin{thebibliography}{9}
-\bibitem{Conway} J. H. Conway, \emph{On Numbers and Games}, Academic Press, 1976.
-\bibitem{Goldblatt} R. Goldblatt, \emph{Lectures on the Hyperreals}, Springer, 1998.
-\bibitem{Albeverio} S. Albeverio et al., \emph{Nonstandard Methods in Stochastic Analysis and Mathematical Physics}, Academic Press, 1986.
-\end{thebibliography}
-
-\appendix
-\section{Embedding Details}
-The embedding \(\mathbb{S}_F \to {}^*\mathbb{R}\) maps \(s = r + \sum a_k \omega^{-k}\) to its hyperreal equivalent, preserving field operations.
-
-\end{document}
+\section
