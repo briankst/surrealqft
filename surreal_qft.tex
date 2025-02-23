@@ -152,15 +152,29 @@ For \(\ket{\psi} = \frac{\ket{000} + \ket{111}}{\sqrt{2}}\), local tags ensure p
 
 \section{Gravity Integration}
 \subsection{Surreal-Extended Field Equations}
+\textit{Surreal QFT} extends GR by incorporating surreal corrections into the action:
 \begin{equation}
-S = \int d^4x \sqrt{-g} \left( \frac{R}{16\pi G} + \epsilon R^q + \mathcal{L}_m \right),
+S = \int d^4x \sqrt{-g} \left( \frac{R}{16\pi G} + \epsilon R^2 + \mathcal{L}_m \right),
 \end{equation}
+where \( q = 2 \) introduces a quadratic curvature correction scaled by the infinitesimal \(\epsilon\), potentially representing sub-Planckian quantum effects. The field equations become:
 \begin{equation}
-G_{\mu\nu} = 8\pi G \left( T_{\mu\nu}^{(0)} + \epsilon T_{\mu\nu}^{(1)} \right).
+G_{\mu\nu} + \epsilon G_{\mu\nu}^{(1)} = 8\pi G \left( T_{\mu\nu}^{(0)} + \epsilon T_{\mu\nu}^{(1)} \right),
 \end{equation}
+where \( T_{\mu\nu}^{(0)} \) is the standard matter stress-energy tensor, and \( T_{\mu\nu}^{(1)} \) arises from surreal field contributions.
+
+\textbf{Derivation of Field Equations:} Varying the action with respect to \( g^{\mu\nu} \), the \(\epsilon R^2\) term yields:
+\[
+G_{\mu\nu}^{(1)} = 2\epsilon \left( R R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R^2 + \nabla_\mu \nabla_\nu R - g_{\mu\nu} \Box R \right),
+\]
+computed using surreal calculus (Appendix A). In the limit \(\epsilon \to 0\), the standard part recovers GR: \(\text{st}(G_{\mu\nu}) = 8\pi G T_{\mu\nu}^{(0)}\).
+
+\textbf{Toy Model: Surreal Schwarzschild Metric:} For a vacuum solution, perturb the Schwarzschild metric: \( g_{\mu\nu} = g_{\mu\nu}^{(0)} + \epsilon h_{\mu\nu} \). Solving to first order in \(\epsilon\) reveals subtle deviations, testable via gravitational wave signatures.
 
 \subsection{Symmetry Consistency}
-See Section 4.3.
+The correction \(\epsilon R^2\) preserves diffeomorphism invariance, being a scalar constructed from \( R \). The \(\epsilon_i\)-tags are scalar fields tied to initial conditions, ensuring symmetry under coordinate transformations.
+
+\subsection{Physical Interpretation}
+The \(\epsilon R^2\) term may represent quantum gravitational fluctuations, while \( T_{\mu\nu}^{(1)} \) integrates surreal quantum fields (e.g., \(\phi_1(x)\)) into the gravitational sector, unifying QM and GR deterministically.
 
 \section{Comparison with Other Theories}
 \begin{center}
