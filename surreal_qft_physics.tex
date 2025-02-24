@@ -22,11 +22,13 @@ Quantum mechanics (QM) and quantum field theory (QFT) have long grappled with fo
 To ensure mathematical consistency, we restrict our use of surreal numbers to a set-sized subclass suitable for physical applications, avoiding the set-theoretic issues associated with proper classes.
 
 \subsection*{Notation}
-- \(\mathbb{R}\): Real numbers.
-- \({}^*\mathbb{R}\): Hyperreals.
-- \(\epsilon\): Surreal infinitesimal (dimensionless unless specified).
-- \(\Phi(x)\): Information-carrying field enforcing global consistency.
-- \(h_{\mu\nu}\): Metric perturbations.
+\begin{itemize}
+    \item \(\mathbb{R}\): Real numbers.
+    \item \({}^*\mathbb{R}\): Hyperreals.
+    \item \(\epsilon\): Surreal infinitesimal (dimensionless unless specified).
+    \item \(\Phi(x)\): Information-carrying field enforcing global consistency.
+    \item \(h_{\mu\nu}\): Metric perturbations.
+\end{itemize}
 
 \subsection{Primer on Quantum Issues and Determinism}
 Quantum mechanics rests on the wavefunction, which evolves deterministically until measured, then collapses randomly---an apparent inconsistency known as the measurement problem. Philosophers debate whether this randomness reflects an inherent property of nature (instrumentalism) or our ignorance of underlying variables (realism). Bell's theorem adds complexity, proving that any hidden variable theory must be non-local to match quantum correlations, challenging relativity's prohibition on faster-than-light communication.
@@ -69,14 +71,7 @@ P(o_i) = \frac{e^{\epsilon_i / \tau}}{\sum_j e^{\epsilon_j / \tau}}, \quad \tau 
 selecting the largest \(\epsilon_i\), restoring determinism.
 
 \subsection{Bell Inequality Resolution}
-By violating the statistical independence assumption of Bell’s theorem, our model achieves a local deterministic resolution of quantum correlations, consistent with superdeterminism \cite{Hossenfelder2019}.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{bell_test_schematic.png}
-    \caption{Schematic of \(\epsilon_i\)-tags in a Bell test.}
-    \label{fig:bell_test}
-\end{figure}
+By violating the statistical independence assumption of Bell's theorem, our model achieves a local deterministic resolution of quantum correlations, consistent with superdeterminism \cite{Hossenfelder2019}.
 
 \section{Surreal Quantum Field Theory}
 \subsection{Field State}
@@ -150,7 +145,7 @@ which is currently beyond detection limits. More promisingly, in tests of Bell i
 \begin{equation}
 \langle A B \rangle = -\cos(\theta) + \epsilon f(\theta),
 \end{equation}
-where \(f(\theta)\) is a small angular-dependent term. High-precision experiments, such as those by Zeilinger’s group \cite{Zeilinger2017}, could accumulate evidence of such deviations over many trials, probing the boundaries of quantum measurement.
+where \(f(\theta)\) is a small angular-dependent term. High-precision experiments, such as those by Zeilinger's group \cite{Zeilinger2017}, could accumulate evidence of such deviations over many trials, probing the boundaries of quantum measurement.
 
 These predictions provide concrete, testable signatures of \textit{Surreal QFT}, linking its deterministic framework and surreal corrections to observable phenomena. Ongoing and future experimental efforts in these fields offer promising avenues to validate or constrain the theory.
 
@@ -162,9 +157,12 @@ These predictions provide concrete, testable signatures of \textit{Surreal QFT},
 \bibitem{Amaro-Seoane2017} Amaro-Seoane, P., et al. (2017). Laser Interferometer Space Antenna. arXiv:1702.00786.
 \bibitem{Conway1976} Conway, J. H. (1976). \emph{On Numbers and Games}. Academic Press.
 \bibitem{Dennett1984} Dennett, D. C. (1984). \emph{Elbow Room}. MIT Press.
+\bibitem{Goldblatt1998} Goldblatt, R. (1998). \emph{Lectures on the Hyperreals: An Introduction to Nonstandard Analysis}. Springer.
 \bibitem{Hossenfelder2019} Hossenfelder, S., Palmer, T. (2019). Rethinking Superdeterminism. \emph{Frontiers in Physics}, 8, 139.
 \bibitem{Leibniz1686} Leibniz, G. W. (1686). \emph{Discourse on Metaphysics}.
 \bibitem{LIGO2016} Abbott, B. P., et al. (2016). \emph{Phys. Rev. Lett.}, 116(6), 061102.
+\bibitem{Ludlow2015} Ludlow, A. D., et al. (2015). Optical atomic clocks. \emph{Reviews of Modern Physics}, 87(2), 637.
+\bibitem{SimonsObs2024} The Simons Observatory Collaboration. (2024). The Simons Observatory: Science goals and forecasts. Retrieved from \url{https://simonsobservatory.org/science-goals/}
 \bibitem{Valentini2005} Valentini, A. (2005). Signal-Locality, Uncertainty, and the Subquantum H-Theorem. \emph{Physics Letters A}, 337, 321-329.
 \bibitem{Zeilinger2017} Zeilinger, A. (2017). Quantum entanglement and information. \emph{Physics Today}, 70(3), 34.
 \end{thebibliography}

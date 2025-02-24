@@ -3,6 +3,8 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{doi}
+\usepackage{array}
+\usepackage{microtype}
 
 \begin{document}
 
@@ -37,14 +39,6 @@ Surreal numbers \(\mathbb{S}\) form a vast ordered field encompassing real numbe
 
 We focus on surreals corresponding to hyperreal infinitesimals (e.g., \(\epsilon \sim l_P / L\), where \(l_P \approx 1.6 \times 10^{-35} \, \text{m}\) is the Planck length and \(L\) is a macroscopic scale) and finite numbers. This subset ensures physical quantities remain measurable and supports Loeb measures for probability in infinite-dimensional systems \cite{Albeverio1986}. Imagine zooming into a fractal: hyperreals provide tools to analyze infinite detail, enabling a rigorous probability framework for quantum fields.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\textwidth]{surreal_number_line.png}
-    % Placeholder: Create a horizontal number line with "0" at center, negative reals and infinitesimals to the left (e.g., -1, -2, -\epsilon, -\epsilon^2), positive reals and infinitesimals to the right (e.g., 1, 2, \epsilon, \epsilon^2), arrows to "Negative Infinities" and "Positive Infinities," and a magnified inset near 0 showing \epsilon, \epsilon/2, \epsilon^3.
-    \caption{The surreal number line, illustrating the inclusion of real numbers, infinitesimals, and infinities.}
-    \label{fig:surreal_line}
-\end{figure}
-
 \subsection{Determinism and Measurement Independence}
 In \textit{Surreal QFT}, the universe is fully deterministic, with all events determined by initial conditions and the laws of physics. Specifically, the \(\epsilon_i\)-``tags'', which are infinitesimal markers set by initial conditions, pre-determine the outcomes of measurements. This is analogous to how initial positions and momenta determine the trajectories of particles in classical mechanics.
 
@@ -55,14 +49,6 @@ P(a, b, \epsilon_i) = P(a, b) P(\epsilon_i),
 where \(a\) and \(b\) are the measurement settings, and \(\epsilon_i\) are the tags. This indicates that there is no correlation between the measurement choices and the tags, preserving the freedom of experimentalists to choose their measurements independently of the hidden variables.
 
 Thus, while the theory is deterministic, it does not impose any unnatural constraints on measurement choices, aligning with the practical autonomy of experimenters.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{epsilon_tags.png}
-    % Placeholder: Diagram showing a quantum state with \(\epsilon_i\)-tags as deterministic markers, arrows showing their independence from experimental settings, and outcomes pre-set by \(\epsilon_i\).
-    \caption{Schematic of \(\epsilon_i\)-tags as deterministic markers, preserving measurement independence.}
-    \label{fig:epsilon_tags}
-\end{figure}
 
 \section{Surreal Quantum Mechanics}
 \subsection{Hilbert Space}
@@ -142,14 +128,6 @@ For \(\ket{\psi} = \frac{\ket{00} + \ket{11}}{\sqrt{2}}\):
 E(a,b) = -\cos(\theta_a - \theta_b), \quad S = 2\sqrt{2}.
 \end{equation}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{bell_test_schematic.png}
-    % Placeholder: Diagram with two particles connected by entanglement, Alice and Bob's setups with choice arrows (a, b) and outcomes (\(\epsilon_A\), \(\epsilon_B\)), and an "Initial Conditions" box setting \(\epsilon_i\)-tags, no lines between Alice and Bob to show locality.
-    \caption{Schematic of how \(\epsilon_i\)-tags determine outcomes in a Bell test, illustrating the deterministic resolution of quantum correlations.}
-    \label{fig:bell_test}
-\end{figure}
-
 \subsection{Determinism and Measurement Independence}
 See Section 2.2. Philosophically, this avoids non-locality while preserving determinism.
 
@@ -186,16 +164,16 @@ The \(\epsilon R^2\) term may represent quantum gravitational fluctuations, whil
 
 \section{Comparison with Other Theories}
 \begin{center}
-\begin{tabular}{lcccc}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3cm}@{\hspace{4pt}}c@{\hspace{4pt}}c@{\hspace{4pt}}c@{\hspace{4pt}}c}
 \hline
-\textbf{Approach} & \textbf{Deterministic} & \textbf{Local} & \textbf{Matches QM} & \textbf{Unifies GR} \\
+\textbf{Approach} & \textbf{Det.} & \textbf{Local} & \textbf{QM} & \textbf{GR} \\
 \hline
 Copenhagen & $\times$ & $\times$ & $\checkmark$ & $\times$ \\
 Bohmian & $\checkmark$ & $\times$ & $\checkmark$ & $\times$ \\
 GRW & $\times$ & $\checkmark$ & Approx. & $\times$ \\
 Many-Worlds & $\times$ & $\checkmark$ & $\checkmark$ & $\times$ \\
 Modal & $\times$ & $\checkmark$ & Approx. & $\times$ \\
-Superdeterministic Pilot-Wave & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ \\
+Super\-deterministic & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ \\
 Surreal QFT & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
 \hline
 \end{tabular}
@@ -212,14 +190,6 @@ Philosophically, \(\delta E_n\) reflects deterministic shifts, challenging proba
 \subsection{Quantum Optics}
 \(\delta \phi \sim 10^{-10}\) in interferometers, revealing surreal effects.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\textwidth,draft]{interferometer_schematic.png}
-    % Placeholder: Diagram showing an interferometer with light paths, \(\epsilon_i\)-tags determining phase shifts, and outcomes pre-set deterministically.
-    \caption{Schematic of surreal effects in quantum optics, illustrating deterministic phase shifts.}
-    \label{fig:interferometer}
-\end{figure}
-
 \section{Detailed CMB Predictions}
 \begin{equation}
 \Delta \mathcal{P}(k) = \epsilon^2 \left( \frac{k}{k_*} \right)^{n_s-1} \ln \left( \frac{k}{k_*} \right),
@@ -231,14 +201,6 @@ below Planck's sensitivity (\(\sigma \sim 10^{-4}\)), testable by CMB-S4.
 
 \subsection{Hypothetical Experimental Design}
 A CMB-S4 campaign focusing on \(l = 2000-4000\) could detect \(\Delta C_l / C_l \sim 10^{-10}\) using noise reduction and galaxy survey cross-correlation.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\textwidth,draft]{cmb_power_spectrum.png}
-    % Placeholder: Plot of \(\Delta \mathcal{P}(k)\) vs. \(k\), highlighting surreal corrections at high \(k\), with standard QFT for comparison.
-    \caption{Power spectrum showing surreal corrections in the CMB, testable by CMB-S4.}
-    \label{fig:cmb_spectrum}
-\end{figure}
 
 \section{Expanded Experimental Predictions}
 \subsection{Spectroscopy}
@@ -252,7 +214,7 @@ A CMB-S4 campaign focusing on \(l = 2000-4000\) could detect \(\Delta C_l / C_l 
 
 \section{Philosophical Implications}
 \textit{Surreal QFT} addresses key issues:
-\subsection{Ontology of \(\epsilon_i\)-Tags}
+\subsection{Ontology of \texorpdfstring{$\epsilon_i$}{εi}-Tags}
 \(\epsilon_i\)-tags act as sub-Planckian determiners, raising philosophical questions: do they exist physically or mathematically? Contrast with Copenhagen's anti-realism---surreal tags restore a realist ontology, grounding quantum outcomes in initial conditions.
 
 \subsection{Determinism as the Defender of Free Will}
@@ -264,7 +226,7 @@ In stark contrast, \textit{Surreal QFT} restores true free will to the experimen
 
 Philosophers have long exposed the fatal flaw of randomness in free will debates. Robert Kane, a libertarian, concedes that randomness in decision-making reduces actions to ``matters of luck,'' undermining moral accountability \cite{Kane1996}. Peter van Inwagen argues that if an action is undetermined, it's as if ``the decision was made by a randomizing device,'' leaving no room for rational control \cite{vanInwagen1983}. Galen Strawson notes that randomness ``cannot enhance control'' and thus cannot ground freedom \cite{Strawson1994}. These critiques dismantle the notion that probabilistic systems offer free will---they don't; they drown it in chaos.
 
-Determinism---whether classical, superdeterministic, or our surreal framework---is the only coherent foundation for free will. Gottfried Wilhelm Leibniz established this: freedom is not the absence of causation but the ability to act according to one's own nature, desires, and rational deliberation, all of which can be determined by prior causes \cite{Leibniz1686}. In \textit{Surreal QFT}, the experimentalist's will is preserved precisely because their choices are determined by who they are, not by blind chance. Leibniz's principle of sufficient reason seals this: every choice has a cause, and our \(\epsilon_i\)-tags provide that cause, ensuring a rational, comprehensible universe.
+Determinism---whether classical, super\-deter\-min\-istic, or our surreal frame\-work---is the only coherent foundation for free will. Gottfried Wilhelm Leibniz estab\-lished this: freedom is not the absence of causation but the ability to act according to one's own nature, desires, and rational deliberation, all of which can be determined by prior causes \cite{Leibniz1686}. In \textit{Surreal QFT}, the experimentalist's will is preserved precisely because their choices are determined by who they are, not by blind chance. Leibniz's principle of sufficient reason seals this: every choice has a cause, and our \(\epsilon_i\)-tags provide that cause, ensuring a rational, comprehensible universe.
 
 Modern compatibilists amplify this defense. Daniel Dennett asserts that free will is about having the ``elbow room'' to act on one's desires, which determinism preserves while randomness destroys \cite{Dennett1984}. Harry Frankfurt's hierarchical model holds that freedom emerges when your actions align with your higher-order volitions---a structure determinism supports, but randomness shatters \cite{Frankfurt1971}. John Martin Fischer's ``guidance control'' thrives in a deterministic world where agents shape their paths, not in a lottery of quantum events \cite{Fischer1994}. Susan Wolf ties free will to acting rationally and morally, requiring causal order, not stochastic noise \cite{Wolf1990}. Gary Watson sees freedom in acting from one's evaluative judgments---possible only when choices are determined by your values, not flipped by a coin \cite{Watson1975}. These thinkers converge on a truth we assert unapologetically: determinism is the bedrock of free will; randomness is its executioner.
 
@@ -278,7 +240,9 @@ Local \(\epsilon_i\)-tags resolve non-locality, reinforcing realism. Eliminating
 
 \begin{thebibliography}{9}
 \bibitem{Albeverio1986} Albeverio, S., Høegh-Krohn, R., Fenstad, J.E., and Lindstrøm, T. (1986). \emph{Nonstandard Methods in Stochastic Analysis and Mathematical Physics}. Academic Press.
-\bibitem{LIGO2016} Abbott, B. P., et al. (LIGO Scientific Collaboration and Virgo Collaboration). (2016). Observation of Gravitational Waves from a Binary Black Hole Merger. \emph{Physical Review Letters}, 116(6), 061102. DOI: \href{https://doi.org/10.1103/PhysRevLett.116.061102}{10.1103/PhysRevLett.116.061102}
+\bibitem{LIGO2016} Abbott, B. P., et al. (LIGO Scientific Collaboration and Virgo Collaboration). (2016). 
+Observation of Gravitational Waves from a Binary Black Hole Merger. \emph{Physical Review Letters}, 
+116(6), 061102. \href{https://doi.org/10.1103/PhysRevLett.116.061102}{DOI: 10.1103/PhysRevLett.116.061102}
 \bibitem{Conway1976} Conway, J. H. (1976). \emph{On Numbers and Games}. Academic Press.
 \bibitem{Dennett1984} Dennett, D. C. (1984). \emph{Elbow Room: The Varieties of Free Will Worth Wanting}. MIT Press.
 \bibitem{Ehrlich2012} Ehrlich, P. (2012). The absolute arithmetic continuum and the unification of all numbers great and small. \emph{Bulletin of Symbolic Logic}, 18(1), 1-45.
@@ -286,7 +250,9 @@ Local \(\epsilon_i\)-tags resolve non-locality, reinforcing realism. Eliminating
 \bibitem{Frankfurt1971} Frankfurt, H. G. (1971). Freedom of the Will and the Concept of a Person. \emph{Journal of Philosophy}, 68(1), 5-20.
 \bibitem{Goldblatt1998} Goldblatt, R. (1998). \emph{Lectures on the Hyperreals: An Introduction to Nonstandard Analysis}. Springer.
 \bibitem{Grosser2001} Grosser, M., Kunzinger, M., Oberguggenberger, M., and Steinbauer, R. (2001). \emph{Geometric Theory of Generalized Functions with Applications to General Relativity}. Springer.
-\bibitem{Hossenfelder2020} Hossenfelder, S. (2020). Rethinking superdeterminism. \emph{Frontiers in Physics}, 8, 139. DOI: \href{https://doi.org/10.3389/fphy.2020.00139}{10.3389/fphy.2020.00139}
+\bibitem{Hossenfelder2020} Hossenfelder, S. (2020). Rethinking\\ 
+superdeterminism. \emph{Frontiers in Physics}, 8, 139.\\
+DOI: \href{https://doi.org/10.3389/fphy.2020.00139}{10.3389/fphy.2020.00139}
 \bibitem{Kane1996} Kane, R. (1996). \emph{The Significance of Free Will}. Oxford University Press.
 \bibitem{Leibniz1686} Leibniz, G. W. (1686). \emph{Discourse on Metaphysics}.
 \bibitem{Palmer2020} Palmer, T. N. (2020). Discretization of the Bloch sphere, fractal invariant sets and Bell's theorem. \emph{Proceedings of the Royal Society A}, 476(2236), 20190350.
